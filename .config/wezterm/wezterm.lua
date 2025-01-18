@@ -8,7 +8,14 @@ local act = wezterm.action
 
 config.automatically_reload_config = true
 config.color_scheme = "Rosé Pine (Gogh)"
-config.window_background_opacity = 0.99
+config.background = {
+	{
+		source = {
+			File = "/home/wicked/Pictures/Wallpapers/raiden-shogun-5k-5120x2880-16500.jpg",
+		},
+		hsb = { brightness = 0.03 },
+	},
+}
 
 config.font = wezterm.font_with_fallback({
 	{
@@ -43,8 +50,14 @@ config.font_rules = {
 	},
 }
 
-config.font_size = 12
-config.cell_width = 1
+config.font_size = 10.5
+
+config.window_padding = {
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
+}
 
 --Tab suyff
 config.keys = {
@@ -56,20 +69,6 @@ config.keys = {
 		action = wezterm.action.CloseCurrentTab({ confirm = true }),
 	},
 }
-
-for i = 1, 8 do
-	-- CTRL+ number to activate that tab
-	table.insert(config.keys, {
-		key = tostring(i),
-		mods = "CTRL",
-		action = act.ActivateTab(i - 1),
-	})
-	-- F1 through F8 to activate that tab
-	table.insert(config.keys, {
-		key = "F" .. tostring(i),
-		action = act.ActivateTab(i - 1),
-	})
-end
 
 config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = false
