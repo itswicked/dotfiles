@@ -4,16 +4,14 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-local act = wezterm.action
-
 config.automatically_reload_config = true
 config.color_scheme = "Rosé Pine (Gogh)"
 config.background = {
 	{
 		source = {
-			File = "/home/wicked/Pictures/Wallpapers/raiden-shogun-5k-5120x2880-16500.jpg",
+			File = "/home/wicked/Pictures/Wallpapers/wallpaperflare.com_wallpaper.jpg",
 		},
-		hsb = { brightness = 0.03 },
+		hsb = { brightness = 0.01 },
 	},
 }
 
@@ -59,14 +57,11 @@ config.window_padding = {
 	bottom = 0,
 }
 
---Tab suyff
 config.keys = {
-	{ key = "-", mods = "ALT", action = act.ActivateTabRelative(-1) },
-	{ key = "=", mods = "ALT", action = act.ActivateTabRelative(1) },
 	{
-		key = "w",
+		key = "v",
 		mods = "CTRL",
-		action = wezterm.action.CloseCurrentTab({ confirm = true }),
+		action = wezterm.action.ToggleFullScreen,
 	},
 }
 
