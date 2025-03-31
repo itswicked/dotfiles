@@ -9,8 +9,8 @@ building the files is kinda Jank cause idk how to setup QMK correctly.
 
 #### For left side
 
-Copy everthing to the custome folder within the qmk_firmware first
-`cp -r /home/wicked/dotfiles/lily58-config/right ~/qmk_firmware/keyboards/lily58/keymaps/custom`
+Copy everthing to the custom folder within the qmk_firmware first
+`cp -r /home/wicked/dotfiles/lily58-config/left ~/qmk_firmware/keyboards/lily58/keymaps/custom`
 
 and then run `qmk compile -kb lily58/rev1 -km custom`
 
