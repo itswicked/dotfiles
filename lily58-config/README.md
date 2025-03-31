@@ -14,8 +14,17 @@ Copy everthing to the custom folder within the qmk_firmware first
 
 and then run `qmk compile -kb lily58/rev1 -km custom`
 
-If custome folder already exists then you might want to delete that first.
+If custom folder already exists then you might want to delete that first.
 
 After the Hex file is generated, get that from the .build folder and paste it in this folder
 
 #### For Right side
+
+Copy everthing to the custom folder within the qmk_firmware first
+`cp -r /home/wicked/dotfiles/lily58-config/right ~/qmk_firmware/keyboards/lily58/keymaps/custom`
+
+and then run `qmk compile -kb lily58/rev1 -km custom`
+
+If custom folder already exists then you might want to delete that first.
+
+After the Hex file is generated, get that from the .build folder and paste it in this folder
