@@ -1,0 +1,25 @@
+[colors.primary]
+background = "#161616"
+
+[font]
+size = 14
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+# Disable italic fonts
+[font.italic]
+family = "MesloLGS NF"
+style = "Regular"
+
+[window]
+padding = { x = 0, y = 0 }
+
+# opacity = 0.9
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "V"
+mods = "Control|Shift"
+
